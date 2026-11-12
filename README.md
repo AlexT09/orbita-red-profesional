@@ -1,8 +1,26 @@
 # Órbita · Red Profesional sobre grafos
 
-Aplicación de networking profesional (estilo LinkedIn) construida con **Python**, **Streamlit** y **Neo4j AuraDB**. Desarrollada para el proyecto I+D de Bases de Datos: *Bases de datos orientadas a grafos*.
+**Proyecto de Investigación y Desarrollo (I+D) · Bases de Datos · Grupo 202630-2424**
+*Diseño e implementación de una aplicación basada en base de datos de grafos para la gestión y análisis de relaciones en una red profesional.*
 
-Permite gestionar usuarios, empresas, habilidades, proyectos y ofertas laborales, y analizar la red: contactos en común, rutas más cortas, recomendaciones de contactos, empleos, colaboradores y candidatos, usuarios influyentes, comunidades y habilidades más demandadas.
+Integrantes: Juan Diaz, Manuela Maiguel y Alex Teran.
+
+Aplicación de red profesional construida con **Python**, **Streamlit** y **Neo4j AuraDB**. Permite gestionar usuarios, empresas, habilidades, proyectos y ofertas laborales, y analizar la red: contactos en común, rutas más cortas, recomendaciones de contactos, empleos, colaboradores y candidatos, usuarios influyentes, comunidades y habilidades más demandadas.
+
+## Entregables
+
+| Entregable (según el enunciado) | Archivo |
+|---|---|
+| Documento: bases de datos de grafos, modelo utilizado, scripts, consultas y componente de investigación | [`docs/Documento_Academico_Orbita_final.pdf`](docs/Documento_Academico_Orbita_final.pdf) (versión editable: [`.docx`](docs/Documento_Academico_Orbita_final.docx)) |
+| Script de inicio de la base: esquema (restricciones e índices) | [`cypher/01_esquema.cypher`](cypher/01_esquema.cypher) |
+| Script de inicio de la base: datos de demostración | [`cypher/02_datos_demo.cypher`](cypher/02_datos_demo.cypher) |
+| Script de las consultas utilizadas | [`cypher/03_consultas.cypher`](cypher/03_consultas.cypher) |
+| Diagrama del modelo | [`docs/modelo_grafo.png`](docs/modelo_grafo.png) |
+| Capturas de la aplicación | [`docs/capturas/`](docs/capturas/) |
+| Resultados reales de las consultas | [`docs/evidencias.md`](docs/evidencias.md) |
+| Aplicación publicada (demostración) | https://orbita-red-profesional.streamlit.app/ |
+
+El componente de investigación (en qué escenarios el modelo de grafos supera al relacional y en cuáles no) está en la sección 7 del documento.
 
 ## Requisitos
 
@@ -95,10 +113,9 @@ Las 65 pruebas se ejecutan **contra Neo4j real** y solo crean y borran datos mar
 | `scripts/exportar_cypher.py` | Genera `cypher/01_esquema.cypher`, `02_datos_demo.cypher` y `03_consultas.cypher` desde el código |
 | `scripts/generar_evidencias.py` | Ejecuta las consultas clave y las pruebas, y guarda los resultados reales en `docs/evidencias.md` |
 | `scripts/diagrama_modelo.py` | Dibuja `docs/modelo_grafo.png` |
-| `scripts/generar_docx.py` | Convierte el documento académico a Word (`docs/Documento_Academico_Orbita_final.docx`) |
-| `docs/documento_academico.md` | Documento entregable (secciones 1-9 e investigación) |
-| `docs/guia_demostracion.md` | Guion de demostración de 15 minutos |
-| `docs/matriz_cumplimiento.md` | Matriz requisito · archivo · pantalla · Cypher · prueba · estado |
+| `scripts/inicializar_bd.py` | Crea el esquema y carga los datos de demostración desde Python |
+| `scripts/verificar_conexion.py` | Prueba la conexión y muestra el contenido de la base |
+| `scripts/crear_admin.py` | Crea o promueve una cuenta de administrador |
 
 ## Arquitectura
 
@@ -118,5 +135,5 @@ orbita/                  Capa de datos (sin dependencias de la interfaz)
 ui/                     Una página por módulo funcional
 tests/                  Pruebas de integración y de interfaz
 cypher/                 Scripts Cypher entregables
-docs/                   Documento académico, evidencias, guía y matriz
+docs/                   Documento (PDF y Word), diagrama, capturas y evidencias
 ```
