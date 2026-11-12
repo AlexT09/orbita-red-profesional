@@ -11,7 +11,7 @@ Aplicación de red profesional construida con **Python**, **Streamlit** y **Neo4
 
 | Entregable (según el enunciado) | Archivo |
 |---|---|
-| Documento: bases de datos de grafos, modelo utilizado, scripts, consultas y componente de investigación | [`docs/Documento_Academico_Orbita_final.pdf`](docs/Documento_Academico_Orbita_final.pdf) (versión editable: [`.docx`](docs/Documento_Academico_Orbita_final.docx)) |
+| Documento: bases de datos de grafos, modelo utilizado, scripts, consultas y componente de investigación | [`docs/Documento_Academico_Orbita_final.docx`](docs/Documento_Academico_Orbita_final.docx) |
 | Script de inicio de la base: esquema (restricciones e índices) | [`cypher/01_esquema.cypher`](cypher/01_esquema.cypher) |
 | Script de inicio de la base: datos de demostración | [`cypher/02_datos_demo.cypher`](cypher/02_datos_demo.cypher) |
 | Script de las consultas utilizadas | [`cypher/03_consultas.cypher`](cypher/03_consultas.cypher) |
