@@ -368,8 +368,8 @@ Los términos de las fórmulas de empleos y candidatos se definen así:
 
 **Comunidades.** El subgrafo `(:Usuario)-[:CONECTA_CON]-(:Usuario)` se obtiene en tiempo real con Cypher y se aplican dos métodos explícitos:
 
-1. **Componentes conectados:** grupos de usuarios unidos por algún camino. Es exacto, pero grueso: en los datos de demostración da 3 componentes (la red principal, el par de Bucaramanga y la usuaria aislada).
-2. **Louvain** (`networkx.community.louvain_communities`, semilla 42): maximiza la modularidad. En los datos de demostración detecta **6 comunidades** con **modularidad 0,63**. Cuatro de ellas coinciden con los grupos diseñados por área y ciudad; las otras dos son los componentes desconectados (el par de Bucaramanga y la usuaria aislada), que Louvain no puede unir a ningún grupo.
+1. **Componentes conectados:** grupos de usuarios unidos por algún camino. Es exacto, pero grueso: en los datos de demostración da 3 componentes (la red principal, el par de Bucaramanga y la usuaria aislada). En la base publicada aparece además un cuarto componente: una cuenta real registrada durante las pruebas, que todavía no tiene conexiones.
+2. **Louvain** (`networkx.community.louvain_communities`, semilla 42): maximiza la modularidad. En los datos de demostración detecta **6 comunidades** con **modularidad 0,63**. Cuatro de ellas coinciden con los grupos diseñados por área y ciudad; las otras dos son los componentes desconectados (el par de Bucaramanga y la usuaria aislada), que Louvain no puede unir a ningún grupo. En la base publicada, que incluye esa cuenta real adicional, Louvain detecta 7 comunidades con la misma modularidad (Figura 14): la séptima es la cuenta aislada.
 
 **Limitaciones de Louvain:**
 
@@ -524,7 +524,7 @@ Las evidencias completas se generan automáticamente con `python scripts/generar
 | Proyectos relacionados | Motor de Scoring Crediticio y Lago de Datos en la Nube: 3 tecnologías, 1 miembro y 6 pares conectados |
 | Habilidades más demandadas | Python (11 ofertas), Docker (6), Linux (5), SQL (5) |
 | Influyentes | Alejandro Restrepo (índice 100: 11 conexiones, mayor intermediación) |
-| Comunidades | Louvain: 6 comunidades (4 grupos reales y 2 componentes aislados), modularidad 0,63. Componentes conectados: 3 |
+| Comunidades | Louvain: 6 comunidades (4 grupos reales y 2 componentes aislados), modularidad 0,63. Componentes conectados: 3. En la base publicada (con una cuenta real adicional sin conexiones): 7 comunidades y 4 componentes |
 
 ### 8.4 Pruebas automáticas
 

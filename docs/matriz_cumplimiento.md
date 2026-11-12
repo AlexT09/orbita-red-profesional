@@ -51,13 +51,15 @@ Todas las consultas se pueden ver en la interfaz con el desplegable **"Ver consu
 | Scripts de inicio de la BD | `cypher/01_esquema.cypher`, `cypher/02_datos_demo.cypher`, `scripts/inicializar_bd.py`, §5 | ✅ Completo y ejecutado |
 | Script de las consultas utilizadas | `cypher/03_consultas.cypher`, §6 | ✅ Completo y validado |
 | Componente de investigación (cuándo el grafo supera al relacional y cuándo no) | §7 | ✅ Completo |
-| Justificación de Neo4j, evidencias, conclusiones | §2, §8, §9, `docs/evidencias.md` | ✅ Completo (faltan capturas de pantalla: ver pendientes) |
+| Justificación de Neo4j, evidencias, conclusiones | §2, §8, §9, `docs/evidencias.md` | ✅ Completo: Figuras 2 a 16 insertadas (`docs/capturas/`); falta la Figura 17 (ver pendientes) |
 | Demostración ≤ 15 minutos | `docs/guia_demostracion.md` | ✅ Guion ensayado contra la base |
 
 ## Pendientes (requieren acción del estudiante)
 
-1. **Capturas de pantalla** para la sección 8 del documento: el entorno de desarrollo no tiene navegador, por lo que no se pudieron tomar.
-2. **Revisión visual en el navegador**: el renderizado se probó de forma automática (AppTest de Streamlit y servidor activo respondiendo), pero la apariencia final debe revisarse manualmente.
+1. **Figura 17** (consola de Neo4j AuraDB con el grafo cargado): requiere la cuenta de Aura de la dueña de la instancia.
+2. ~~Capturas de pantalla de la aplicación~~: hechas sobre la app publicada (Figuras 2 a 16, en `docs/capturas/` y en el documento). Solo se navegó y se rellenaron formularios sin enviarlos; no se modificó la base.
+3. ~~Revisión visual en el navegador~~: revisada al tomar las capturas; todas las pantallas cargan con datos reales.
+4. **Nota sobre los datos publicados**: la base de Streamlit Cloud incluye una cuenta real sin conexiones, además de los datos de demostración. Por eso la app muestra 7 comunidades y 4 componentes (el documento lo explica en §6.5 y §8.3).
 
 ## F. Cuentas y seguridad (adicional)
 
